@@ -62,7 +62,7 @@ void free_history_node(history_t *node)
 if (!node)
 return;
 
-f (node->command)
+f(node->command)
 free(node->command);
 free(node);
 }

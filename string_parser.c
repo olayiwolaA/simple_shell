@@ -115,7 +115,7 @@ int ctrl_ctr = 0;
 int word_len = 0;
 
 /* +1 account for index starting at 0, +1 for NULL too */
-com_tokens = malloc(sizeof(char *) * (((end_ind + 1) - beg_ind) + 1));
+com_tokens = malloc(sizeof(char *) * (((end_ind + 1) - beg_ind) +1));
 if (!com_tokens)
 return (NULL);
 
