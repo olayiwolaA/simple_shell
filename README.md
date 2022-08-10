@@ -21,6 +21,30 @@ Your shell will be compiled this way:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
+## Testing
+Your shell should work like this in interactive mode:
+```
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
+But also in non-interactive mode:
+```
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+```
 ## Tasks
 ### 0. Betty would be proud
 * Write a beautiful code that passes the Betty checks
@@ -58,7 +82,29 @@ Simple shell 0.4 +
 ### 9. setenv, unsetenv
 Simple shell 1.0 +
 * Implement the ``` setenv```  and ``` unsetenv ``` builtin commands
-
+### 10. cd
+Simple shell 1.0 +
+* Implement the builtin command ''' cd''':
+### 11. ;
+Simple shell 1.0 +
+* Handle the commands separator ``` ;```
+### 12. && and ||
+Simple shell 1.0 +
+* Handle the ``` &&``` and ``` ||``` shell logical operators
+### 13. alias
+Simple shell 1.0 +
+* Implement the ``` alias``` builtin command
+### 14. Variables
+Simple shell 1.0 +
+* Handle variables replacement
+* Handle the ``` $?``` variable
+* Handle the ``` $$``` variable
+### 15. Comments
+Simple shell 1.0 +
+* Handle comments (``` #```)
+### 16. File as input
+Simple shell 1.0 +
+* Usage: ``` simple_shell [filename]```
 ## :green_book: Authors
 
 * **Oyewale Olayiwola** - [@OyewaleOlayiwola](https://github.com/olayiwolaA/simple_shell)
